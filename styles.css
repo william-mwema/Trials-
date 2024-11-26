@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none; /* Hidden by default */
+}
+
+.hero {
+    background-image: url('https://source.unsplash.com/1600x900/?nature,green');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.cta {
+    background-color: #fff;
+    color: #4CAF50;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.about, .projects, .get-involved {
+    padding: 50px 20px;
+}
+
+.project-container, .impact-tracker, .volunteer, .donate {
+   margin-top: 30px; 
+}
+
+.project-container {
+   display: flex; 
+   justify-content: space-around; 
+   flex-wrap: wrap; 
+}
+
+.project-item {
+   background-color: #f4f4f4; 
+   border-radius: 8px; 
+   padding: 20px; 
+   width: 30%; 
+   margin-bottom: 20px; 
+}
+
+.get-involved h2, .projects h2 {
+   text-align:center; 
+}
+
+.donate button {
+   background-color:#4CAF50; 
+   color:white; 
+   padding:10px 15px; 
+   border:none; 
+   border-radius:5px; 
+   cursor:pointer; 
+}
+
+/* Footer Styles */
+footer {
+   background-color:#333; 
+   color:white; 
+   text-align:center; 
+   padding:20px 0; 
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+   .nav-links {
+       display:none; /* Hide links by default */
+       flex-direction: column; /* Stack links vertically */
+       position:absolute; /* Position absolutely */
+       top:60px; /* Position below the nav */
+       right:0; 
+       background-color:#4CAF50; /* Match the nav color */
+       width:100%; /* Full width */
+   }
+
+   .nav-links.active {
+       display:flex; /* Show links when active */
+   }
+
+   .menu-toggle {
+       display:flex; /* Show menu toggle on small screens */
+       flex-direction:column; 
+       cursor:pointer; 
+   }
+
+   .project-container {
+       flex-direction: column; /* Stack project items vertically */
+       align-items:center; /* Center items horizontally */
+   }
+
+   .project-item {
+       width:auto; /* Reset width for smaller screens */
+       margin-bottom:20px; /* Add space between items */
+   }
+}
